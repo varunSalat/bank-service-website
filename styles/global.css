@@ -140,12 +140,27 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  flex-direction: column;
-  align-items: flex-end;
+  gap: 0.5em;
 }
-
+.logo-first-text {
+  color: var(--black_color);
+  font-size: var(--tertiary_header);
+}
+.logo-second-text {
+  font-size: var(--label_text);
+  color: var(--secondary_black_color);
+}
+.logo-second-text i {
+  font-size: var(--label_text);
+}
 .logo a img {
-  width: 100px;
+  width: 45px;
+}
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
 }
 
 #nav-bar {
@@ -238,7 +253,7 @@ body {
     transform: translateY(-11px) rotate(-45deg);
   }
   .logo a img {
-    width: 80px;
+    width: 35px;
   }
   .logo-text {
     font-size: 1.5rem;

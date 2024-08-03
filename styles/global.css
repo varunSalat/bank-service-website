@@ -52,8 +52,8 @@ body {
 @media screen and (max-width: 600px) {
   body {
     /* FONT SIZES */
-    --primary_header: 1.5rem;
-    --secondary_header: 1.3rem;
+    --primary_header: 2rem;
+    --secondary_header: 1.5rem;
     --tertiary_header: 1.2rem;
     --body_text: 1rem;
     --label_text: 0.8rem;

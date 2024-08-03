@@ -15,9 +15,94 @@
       BankTab | Trusted Personal, Business, and Vehicle Loans | Invoice
       Financing
     </title>
+    <!-- FONT AWESOME -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- !SWIPER JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- !HEADER SECTION -->
+    <header id="header">
+      <nav id="nav-bar">
+        <div class="logo">
+          <a href="/">
+            <img src="./assets/logo-black.png" alt="BankTab logo" />
+          </a>
+        </div>
+        <div class="burger">
+          <i class="burger-line"></i>
+          <i class="burger-line"></i>
+          <i class="burger-line"></i>
+        </div>
+        <ul class="nav-link-container flex">
+          <li class="nav-link active"><a href="/">Home</a></li>
+          <li class="nav-link"><a href="./about-us.html">About Us</a></li>
+          <li class="nav-link"><a href="./gallery.html">Services</a></li>
+          <li class="nav-link"><a href="./contact-us.html">Contact Us</a></li>
+          <li class="nav-link">
+            <a href="./contact-us.html" class="btn" id="apply-now">Apply Now</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- !HERO SECTION -->
+    <section class="section flex" id="hero-section">
+      <div class="hs-left-container">
+        <h2>Welcome To MoneyTab</h2>
+        <h1>
+          Empowering <br />Your Financial Journey, <br />Seamlessly & Securely
+        </h1>
+        <p>
+          Discover flexible financing solutions with competitive rates and
+          excellent service, designed to empower individuals and businesses at
+          every step.
+        </p>
+        <div class="flex" id="hs-btn-container">
+          <a href="#" class="btn" id="hs-apply-now">Apply Now</a>
+          <a href="#" class="btn" id="hs-know-more">Know More</a>
+        </div>
+        <div class="flex" id="hs-small-dis">
+          <i class="bx bx-check-shield"></i>
+          <p>TRUSTED FINANCIAL PARTNER FOR MILLIONS - SINCE 2014</p>
+        </div>
+      </div>
+      <div class="hs-right-container">
+        <img
+          src="./assets/homepage/red-dot.png"
+          class="hs-red-img hs-cir"
+          alt="red-cir"
+        />
+        <img
+          src="./assets/homepage/blue-dot.png"
+          class="hs-blue-img hs-cir"
+          alt="blue-cir"
+        />
+        <img
+          src="./assets/homepage/hero-modern-img.jpg"
+          class="hero-img"
+          alt="hero-img"
+        />
+        <img
+          src="./assets/homepage/hero-graphic-1.png"
+          alt="hero-graphic-1"
+          class="hero-graphic-1"
+        />
+        <img
+          src="./assets/homepage/hero-graphic-2.png"
+          alt="hero-graphic-2"
+          class="hero-graphic-2"
+        />
+      </div>
+    </section>
+  </body>
 </html>

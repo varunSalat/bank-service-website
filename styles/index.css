@@ -1,0 +1,143 @@
+:root {
+  scroll-behavior: smooth;
+  --primary_color: #624bff;
+  --primary_dark_color: #301f9b;
+  --success_color: #198754;
+  --black_color: #000;
+  --secondary_black_color: #5c5c5c;
+  --tertiary_black_color: #929292;
+  --white_color: #fff;
+  --three_mili: all 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+/* !<!-- !HERO SECTION --> */
+#hero-section {
+  gap: 4em;
+  padding-top: 70px;
+}
+.hs-left-container,
+.hs-right-container {
+  width: 50%;
+}
+.hs-left-container h2 {
+  font-size: var(--body_text);
+  color: var(--primary_color);
+  font-weight: normal;
+}
+.hs-left-container h1 {
+  font-size: var(--secondary_header);
+  margin: 0.6em 0;
+}
+.hs-left-container p {
+  font-size: var(--body_text);
+  color: var(--secondary_black_color);
+  max-width: 500px;
+}
+
+#hs-btn-container {
+  margin: 2em 0;
+  gap: 2em;
+}
+#hs-apply-now {
+  background-color: var(--primary_color);
+  color: var(--white_color);
+  border: 1px solid var(--primary_color);
+}
+#hs-apply-now:hover {
+  background-color: var(--primary_dark_color);
+  color: var(--white_color);
+  border: 1px solid var(--primary_dark_color);
+}
+#hs-know-more {
+  border: 1px solid var(--primary_color);
+}
+#hs-know-more:hover {
+  background-color: var(--primary_color);
+  color: var(--white_color);
+}
+
+#hs-small-dis {
+  gap: 0.2em;
+}
+#hs-small-dis p {
+  font-size: var(--label_text);
+}
+#hs-small-dis i {
+  color: var(--success_color);
+  font-size: 22px;
+}
+
+.hs-right-container {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.hero-img {
+  width: 85%;
+  height: 85%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+.hs-cir {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.hs-red-img {
+  top: 0;
+  left: 20%;
+}
+.hs-blue-img {
+  bottom: 0;
+  right: 30%;
+}
+
+.hero-graphic-1 {
+  position: absolute;
+  z-index: 2;
+  right: -10%;
+  width: 200px;
+  height: fit-content;
+}
+.hero-graphic-2 {
+  position: absolute;
+  z-index: 2;
+  left: -10%;
+  bottom: 8%;
+  width: 300px;
+  height: fit-content;
+}
+/* Hero responsive starts */
+
+@media screen and (max-width: 1100px) {
+  .hs-right-container {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #hero-section {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .hs-left-container,
+  .hs-right-container {
+    width: 100%;
+  }
+  .hs-right-container {
+    width: 90%;
+    height: 350px;
+  }
+  .hero-graphic-2 {
+    width: 200px;
+  }
+  .hero-graphic-1 {
+    width: 150px;
+  }
+}

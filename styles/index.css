@@ -6,6 +6,7 @@
   --black_color: #000;
   --secondary_black_color: #5c5c5c;
   --tertiary_black_color: #929292;
+  --bg_color: #f8f9fa;
   --white_color: #fff;
   --three_mili: all 0.3s ease;
   scroll-behavior: smooth;
@@ -233,13 +234,14 @@
 .wwo_card {
   justify-content: space-around;
   gap: 2em;
+  flex-direction: row-reverse;
 }
 .wwocl_header h2 {
   font-size: var(--secondary_header);
 }
 .wwocl_header p {
   color: var(--secondary_black_color);
-  font-size: var(--tertiary_header);
+  font-size: calc(var(--tertiary_header) * 0.9);
   margin: 0.5em 0;
 }
 .wwocl_list li {
@@ -263,6 +265,9 @@
   width: 500px;
   height: 500px;
 }
+.wwoc_right .hero-img {
+  max-height: 400px;
+}
 
 @media screen and (max-width: 1000px) {
   .wwo_card {
@@ -270,6 +275,140 @@
   }
   .wwoc_right {
     height: 350px;
-    width: min(400px, 90%);
+    width: min(400px, 100%);
   }
+}
+
+/* !<!-- !GETTING STARTED EASY SECTION --> */
+#gse_section {
+  background-color: var(--bg_color);
+}
+#gse_header {
+  text-align: center;
+}
+#gse_header p {
+  margin-top: 2em;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: var(--body_text);
+}
+
+.gse_container {
+  margin-top: 4em;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+.gse_card {
+  width: min(350px, 100%);
+  align-items: flex-start;
+  border-radius: 10px;
+  gap: 1em;
+}
+.gse_header {
+  gap: 0.5em;
+  font-size: calc(var(--tertiary_header) * 0.9);
+}
+.gsec_left {
+  font-size: var(--tertiary_header);
+  font-weight: 600;
+  color: var(--primary_color);
+  display: grid;
+  place-items: center;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  border: 2px solid var(--primary_color);
+  border-radius: 50%;
+}
+.gsec_right {
+  margin-top: 5px;
+}
+.gse_card p {
+  margin-top: 0.5em;
+  width: 90%;
+  color: var(--secondary_black_color);
+}
+
+.gse_action_container {
+  margin-top: 4em;
+  text-align: center;
+}
+#ges_btn {
+  background-color: var(--primary_color);
+  color: var(--white_color);
+  font-weight: 600;
+}
+.gse_action_container p {
+  color: var(--tertiary_black_color);
+  font-size: var(--label_text);
+  margin-top: 1em;
+}
+
+/* !<!-- !ABOUT US SECTION --> */
+.au_left_card {
+  width: 50%;
+}
+.au_dis {
+  margin: 2em 0;
+}
+.au_dis p {
+  text-indent: 1em;
+  margin: 2em 0;
+  color: var(--secondary_black_color);
+  line-height: 1.8em;
+}
+@media screen and (max-width: 1000px) {
+  .au_card {
+    flex-direction: column-reverse;
+  }
+  .au_left_card {
+    width: 100%;
+  }
+}
+.wwo_card.hidden {
+  display: none;
+}
+
+.wwoc_left {
+  width: 50%;
+}
+
+.cc-num {
+  background-color: #d8d2ff30;
+  height: 40px;
+  width: 40px;
+  font-size: var(--tertiary_header);
+  color: var(--primary_color);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+}
+.cc-num i {
+  color: var(--primary_color) !important;
+}
+
+.wwoi_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  margin-top: 2em;
+}
+.wwoi_list li {
+  gap: 1em;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--secondary_black_color);
+}
+.wwoi-name {
+  font-size: var(--tertiary_header);
+  color: var(--primary_color);
+}
+
+.wwo_insurance_container {
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 4em;
+}
+.wwo_ins_card {
+  width: min(400px, 100%);
 }

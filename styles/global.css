@@ -13,6 +13,7 @@
   --secondary_black_color: #5c5c5c;
   --tertiary_black_color: #929292;
   --white_color: #fff;
+  --bg_color: #f8f9fa;
   --three_mili: all 0.3s ease;
   scroll-behavior: smooth;
 }
@@ -102,8 +103,9 @@ body {
   cursor: pointer;
   display: inline-block;
   font-size: var(--body_text);
+  font-weight: 600;
   color: var(--black_color);
-  padding: 0.6em 0.8em;
+  padding: 0.8em 1em;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

@@ -15,6 +15,7 @@
 #hero-section {
   gap: 4em;
   padding-top: 70px;
+  max-width: 1200px;
 }
 .hs-left-container,
 .hs-right-container {
@@ -26,13 +27,15 @@
   font-weight: normal;
 }
 .hs-left-container h1 {
-  font-size: var(--secondary_header);
+  font-size: var(--primary_header);
   margin: 0.6em 0;
+  line-height: 1.4em;
 }
 .hs-left-container p {
   font-size: var(--body_text);
   color: var(--secondary_black_color);
   max-width: 500px;
+  line-height: 1.7em;
 }
 
 #hs-btn-container {
@@ -43,6 +46,8 @@
   background-color: var(--primary_color);
   color: var(--white_color);
   border: 1px solid var(--primary_color);
+  padding: 0.8em 1.4em;
+  font-weight: 600;
 }
 #hs-apply-now:hover {
   background-color: var(--primary_dark_color);
@@ -69,8 +74,8 @@
 }
 
 .hs-right-container {
-  width: 600px;
-  height: 600px;
+  width: 650px;
+  height: 650px;
   position: relative;
   display: grid;
   place-items: center;
@@ -82,7 +87,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .hs-cir {
   position: absolute;
@@ -133,11 +138,138 @@
   .hs-right-container {
     width: 90%;
     height: 350px;
+    max-width: 400px;
   }
   .hero-graphic-2 {
     width: 200px;
   }
   .hero-graphic-1 {
     width: 150px;
+  }
+}
+
+/* !<!-- !WHY CHOOSE US SECTION --> */
+#wcu-section {
+  background-color: #f8f9fa;
+}
+
+.wcu_container {
+  margin-top: 2em;
+  display: grid;
+  gap: 4em;
+  grid-template-columns: repeat(2, 1fr);
+}
+.wcu_card {
+  max-width: 350px;
+}
+.wcuc_icon {
+  background-color: #d8d2ff30;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.wcuc_icon {
+  font-size: 28px;
+  color: var(--primary_color);
+}
+
+.wcuc_dis {
+  margin-top: 1em;
+}
+
+.wcuc_dis h2 {
+  font-weight: 600;
+  font-size: var(--tertiary_header);
+  margin-bottom: 0.5em;
+}
+
+.wcuc_dis p {
+  font-size: var(--body_text);
+  color: var(--secondary_black_color);
+}
+
+@media screen and (max-width: 750px) {
+  .wcu_container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+  }
+}
+
+/* !<!-- !WHAT WE OFFER SECTION --> */
+#wwo_header {
+  text-align: center;
+}
+#wwo_header p {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.wwo_nav_container {
+  margin-top: 4em;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.wwo_nav_btn {
+  background-color: #e9ecef;
+  border-radius: 40px;
+  padding: 0.9em 1.2em;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.wwo_nav_btn:hover,
+.wwo_nav_btn.active {
+  background-color: var(--primary_color);
+  color: var(--white_color);
+}
+
+.wwo_container {
+  margin-top: 4em;
+}
+.wwo_card {
+  justify-content: space-around;
+  gap: 2em;
+}
+.wwocl_header h2 {
+  font-size: var(--secondary_header);
+}
+.wwocl_header p {
+  color: var(--secondary_black_color);
+  font-size: var(--tertiary_header);
+  margin: 0.5em 0;
+}
+.wwocl_list li {
+  margin: 1em 0;
+  gap: 0.5em;
+}
+.wwocl_list li i {
+  color: var(--success_color);
+}
+#wwol_pl_btn {
+  background-color: var(--primary_color);
+  color: var(--white_color);
+  margin-top: 1em;
+}
+.wwo_loan_sub_text {
+  margin-top: 1em;
+  font-size: var(--label_text);
+  color: var(--secondary_black_color);
+}
+.wwoc_right {
+  width: 500px;
+  height: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+  .wwo_card {
+    flex-direction: column;
+  }
+  .wwoc_right {
+    height: 350px;
+    width: min(400px, 90%);
   }
 }

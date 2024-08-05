@@ -37,6 +37,7 @@
   color: var(--secondary_black_color);
   max-width: 500px;
   line-height: 1.7em;
+  text-align: justify;
 }
 
 #hs-btn-container {
@@ -187,6 +188,7 @@
 }
 
 .wcuc_dis p {
+  text-align: justify;
   font-size: var(--body_text);
   color: var(--secondary_black_color);
 }
@@ -251,10 +253,21 @@
 .wwocl_list li i {
   color: var(--success_color);
 }
-#wwol_pl_btn {
+#wwol_pl_btn,
+#wwol_mf_btn {
   background-color: var(--primary_color);
   color: var(--white_color);
-  margin-top: 1em;
+  display: block;
+  width: fit-content;
+  margin-top: 2em;
+}
+#wwol_mf_btn {
+  margin: 0 auto;
+  margin-top: 2em;
+}
+#wwol_pl_btn:hover,
+#wwol_mf_btn:hover {
+  background-color: var(--primary_dark_color);
 }
 .wwo_loan_sub_text {
   margin-top: 1em;
@@ -268,6 +281,47 @@
 .wwoc_right .hero-img {
   max-height: 400px;
 }
+.wwo_ins_card {
+  width: min(260px, 100%);
+  padding: 0.5em;
+  border: 1px solid #d8d2ff30;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.wwo_ins_card figure {
+  width: 100%;
+  max-height: 165px;
+  overflow: hidden;
+}
+.wwo_ins_card figure img {
+  border-radius: 5px;
+}
+.wwo_insc_dis {
+  margin-top: 0.5em;
+}
+.wwo_insc_dis h2 {
+  color: var(--primary_color);
+  font-weight: normal;
+  font-size: calc(var(--tertiary_header) * 0.9);
+  margin-bottom: 0.2em;
+}
+.wwo_insc_dis p {
+  color: var(--secondary_black_color);
+  line-height: 1.2em;
+  font-size: var(--label_text);
+  text-align: justify;
+}
+.wwo_ins_card:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.wwo_insurance_container {
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 4em;
+}
 
 @media screen and (max-width: 1000px) {
   .wwo_card {
@@ -276,6 +330,12 @@
   .wwoc_right {
     height: 350px;
     width: min(400px, 100%);
+  }
+  .wwoc_left {
+    width: 100% !important;
+  }
+  .wwo_insurance_container {
+    justify-content: center;
   }
 }
 
@@ -327,6 +387,7 @@
   margin-top: 0.5em;
   width: 90%;
   color: var(--secondary_black_color);
+  text-align: justify;
 }
 
 .gse_action_container {
@@ -356,6 +417,7 @@
   margin: 2em 0;
   color: var(--secondary_black_color);
   line-height: 1.8em;
+  text-align: justify;
 }
 @media screen and (max-width: 1000px) {
   .au_card {
@@ -402,13 +464,4 @@
 .wwoi-name {
   font-size: var(--tertiary_header);
   color: var(--primary_color);
-}
-
-.wwo_insurance_container {
-  gap: 2em;
-  flex-wrap: wrap;
-  margin-top: 4em;
-}
-.wwo_ins_card {
-  width: min(400px, 100%);
 }

@@ -199,14 +199,14 @@
       </div>
       <div class="wwo_main_container">
         <div class="wwo_nav_container flex">
-          <button class="btn wwo_nav_btn active">Loans</button>
-          <button class="btn wwo_nav_btn">Credit Card</button>
-          <button class="btn wwo_nav_btn">Investment</button>
-          <button class="btn wwo_nav_btn">Insurance</button>
+          <button class="btn wwo_nav_btn active" data-wwo="loan">Loans</button>
+          <button class="btn wwo_nav_btn" data-wwo="cc">Credit Card</button>
+          <button class="btn wwo_nav_btn" data-wwo="inv">Investment</button>
+          <button class="btn wwo_nav_btn" data-wwo="ins">Insurance</button>
         </div>
         <div class="wwo_container">
           <!-- ?Personal loan -->
-          <div class="wwo_card flex">
+          <div class="wwo_card flex" data-wwo="loan">
             <div class="wwoc_left">
               <div class="wwocl_header">
                 <h2>Personal Loan</h2>
@@ -255,7 +255,7 @@
             </div>
           </div>
           <!-- ?CREDIT CARD  -->
-          <div class="wwo_card hidden flex">
+          <div class="wwo_card hidden flex" data-wwo="cc">
             <div class="wwoc_left">
               <div class="wwocl_header">
                 <h2>Credit Cards</h2>
@@ -304,7 +304,7 @@
             </div>
           </div>
           <!-- ?INVESTMENT  -->
-          <div class="wwo_card hidden flex">
+          <div class="wwo_card hidden flex" data-wwo="inv">
             <div class="wwoc_left">
               <div class="wwocl_header">
                 <h2>Investment</h2>
@@ -354,14 +354,14 @@
               />
               <img
                 loading="lazy"
-                src="https://img.freepik.com/free-photo/closeup-shot-businessman-s-hands-counting-stacks-coins-after-business-success_181624-57099.jpg?t=st=1722762975~exp=1722766575~hmac=53b718cedefdbbdc9f71e15c7d72672f71f8a4db4e5fff60696ca7c238c6e185&w=1380"
+                src="./assets/homepage/wwo/investment.jpg"
                 class="hero-img"
                 alt="hero-img"
               />
             </div>
           </div>
           <!-- ?INSURANCE  -->
-          <div class="wwo_card hidden">
+          <div class="wwo_card hidden" data-wwo="ins">
             <div class="">
               <div class="wwocl_header">
                 <h2>Insurance</h2>
@@ -371,8 +371,9 @@
                 <div class="wwo_ins_card">
                   <figure>
                     <img
-                      src="https://easetemplate.com/borrow/assets/images/background/auto-insurance.jpg"
+                      src="./assets/homepage/wwo/insurance/auto-insurance.jpg"
                       alt="Auto Insurance"
+                      loading="lazy"
                     />
                   </figure>
                   <div class="wwo_insc_dis">
@@ -384,23 +385,57 @@
                   </div>
                 </div>
                 <div class="wwo_ins_card">
-                  <span class="wwoi-name">Mutual Funds</span>
-                  Diversify your portfolio with expertly managed mutual funds,
-                  tailored to meet your financial goals and risk tolerance.
+                  <figure>
+                    <img
+                      src="./assets/homepage/wwo/insurance/mf.jpg"
+                      alt="Mutual Funds"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <div class="wwo_insc_dis">
+                    <h2>Mutual Funds</h2>
+                    <p>
+                      Diversify your portfolio with expertly managed mutual
+                      funds, tailored to meet your financial goals and risk
+                      tolerance.
+                    </p>
+                  </div>
                 </div>
                 <div class="wwo_ins_card">
-                  <span class="wwoi-name">Stocks and Equities</span>
-                  Take control of your financial future by investing in stocks,
-                  offering the potential for high returns and growth.
+                  <figure>
+                    <img
+                      src="./assets/homepage/wwo/insurance/stock.svg"
+                      alt="Stocks and Equities"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <div class="wwo_insc_dis">
+                    <h2>Stocks and Equities</h2>
+                    <p>
+                      Diversify your portfolio with expertly managed mutual
+                      funds, tailored to meet your financial goals and risk
+                      tolerance.
+                    </p>
+                  </div>
                 </div>
                 <div class="wwo_ins_card">
-                  <span class="wwoi-name">Retirement Accounts</span>
-                  Plan for a secure future with retirement accounts designed to
-                  maximize your savings and tax benefits.
+                  <figure>
+                    <img
+                      src="./assets/homepage/wwo/insurance/ret.jpg"
+                      alt="Retirement Accounts"
+                    />
+                  </figure>
+                  <div class="wwo_insc_dis">
+                    <h2>Retirement Accounts</h2>
+                    <p>
+                      Plan for a secure future with retirement accounts designed
+                      to maximize your savings and tax benefits.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div>
-                <a href="/" class="btn" id="wwol_pl_btn">Get Started</a>
+                <a href="/" class="btn" id="wwol_mf_btn">Get Started</a>
               </div>
             </div>
           </div>
@@ -501,4 +536,27 @@
     </section>
     <!-- !WHOME WE HELPED SECTION -->
   </body>
+  <script>
+    const wwoBtns = document.querySelectorAll(".wwo_nav_btn"),
+      wwoCards = document.querySelectorAll(".wwo_card");
+
+    const handlewwoBtnClick = (type) => {
+      wwoBtns.forEach((btn) =>
+        btn.getAttribute("data-wwo") === type
+          ? btn.classList.add("active")
+          : btn.classList.remove("active")
+      );
+      wwoCards.forEach((btn) =>
+        btn.getAttribute("data-wwo") === type
+          ? btn.classList.remove("hidden")
+          : btn.classList.add("hidden")
+      );
+    };
+
+    wwoBtns.forEach((btn) => {
+      btn.addEventListener("click", () =>
+        handlewwoBtnClick(btn.getAttribute("data-wwo"))
+      );
+    });
+  </script>
 </html>

@@ -148,6 +148,10 @@
   .hero-graphic-1 {
     width: 150px;
   }
+  .hs-right-container .hero-img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* !<!-- !WHY CHOOSE US SECTION --> */
@@ -322,6 +326,45 @@
   flex-wrap: wrap;
   margin-top: 4em;
 }
+.wwo_card.hidden {
+  display: none;
+}
+
+.wwoc_left {
+  width: 50%;
+}
+
+.cc-num {
+  background-color: #d8d2ff30;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  font-size: var(--tertiary_header);
+  color: var(--primary_color);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+}
+.cc-num i {
+  color: var(--primary_color) !important;
+}
+
+.wwoi_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  margin-top: 2em;
+}
+.wwoi_list li {
+  gap: 1em;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--secondary_black_color);
+}
+.wwoi-name {
+  font-size: var(--tertiary_header);
+  color: var(--primary_color);
+}
 
 @media screen and (max-width: 1000px) {
   .wwo_card {
@@ -336,6 +379,15 @@
   }
   .wwo_insurance_container {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wwoi_list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .wwo_ins_card {
+    width: 100%;
   }
 }
 
@@ -426,42 +478,4 @@
   .au_left_card {
     width: 100%;
   }
-}
-.wwo_card.hidden {
-  display: none;
-}
-
-.wwoc_left {
-  width: 50%;
-}
-
-.cc-num {
-  background-color: #d8d2ff30;
-  height: 40px;
-  width: 40px;
-  font-size: var(--tertiary_header);
-  color: var(--primary_color);
-  border-radius: 5px;
-  display: grid;
-  place-items: center;
-}
-.cc-num i {
-  color: var(--primary_color) !important;
-}
-
-.wwoi_list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2em;
-  margin-top: 2em;
-}
-.wwoi_list li {
-  gap: 1em;
-  flex-direction: column;
-  align-items: flex-start;
-  color: var(--secondary_black_color);
-}
-.wwoi-name {
-  font-size: var(--tertiary_header);
-  color: var(--primary_color);
 }

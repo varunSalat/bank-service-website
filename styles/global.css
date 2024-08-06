@@ -9,6 +9,7 @@
   scroll-behavior: smooth;
   --primary_color: #624bff;
   --primary_dark_color: #301f9b;
+  --primary_lightest_color: #e9e8fb;
   --success_color: #198754;
   --black_color: #000;
   --secondary_black_color: #5c5c5c;
@@ -161,7 +162,7 @@ body {
   gap: 0.5em;
 }
 .logo-first-text {
-  color: var(--black_color);
+  color: var(--primary_color);
   font-size: var(--tertiary_header);
 }
 .logo-second-text {

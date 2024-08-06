@@ -52,9 +52,9 @@
           <i class="burger-line"></i>
         </div>
         <ul class="nav-link-container flex">
-          <li class="nav-link active"><a href="/">Home</a></li>
+          <li class="nav-link active"><a href="./">Home</a></li>
           <li class="nav-link"><a href="./about-us.html">About Us</a></li>
-          <li class="nav-link"><a href="./gallery.html">Services</a></li>
+          <li class="nav-link"><a href="./services.html">Services</a></li>
           <li class="nav-link"><a href="./contact-us.html">Contact Us</a></li>
           <li class="nav-link">
             <a href="./contact-us.html" class="btn" id="apply-now">Apply Now</a>
@@ -206,7 +206,7 @@
         </div>
         <div class="wwo_container">
           <!-- ?Personal loan -->
-          <div class="wwo_card flex" data-wwo="loan">
+          <div class="wwo_card show flex" data-wwo="loan">
             <div class="wwoc_left">
               <div class="wwocl_header">
                 <h2>Personal Loan</h2>
@@ -255,7 +255,7 @@
             </div>
           </div>
           <!-- ?CREDIT CARD  -->
-          <div class="wwo_card hidden flex" data-wwo="cc">
+          <div class="wwo_card flex" data-wwo="cc">
             <div class="wwoc_left">
               <div class="wwocl_header">
                 <h2>Credit Cards</h2>
@@ -304,7 +304,7 @@
             </div>
           </div>
           <!-- ?INVESTMENT  -->
-          <div class="wwo_card hidden flex" data-wwo="inv">
+          <div class="wwo_card flex" data-wwo="inv">
             <div class="wwoc_left">
               <div class="wwocl_header">
                 <h2>Investment</h2>
@@ -361,7 +361,7 @@
             </div>
           </div>
           <!-- ?INSURANCE  -->
-          <div class="wwo_card hidden" data-wwo="ins">
+          <div class="wwo_card" data-wwo="ins">
             <div class="">
               <div class="wwocl_header">
                 <h2>Insurance</h2>
@@ -674,34 +674,40 @@
               <i class="bx bx-map"></i>
               3895 Sycamore Road Arlington, 97812
             </a>
-            <a href="#" class="flc_left_card flex">
+            <a href="tel:+919913902087" class="flc_left_card flex">
               <i class="bx bx-phone"></i>
-              +91 997 4397 197
+              +91 99 1390 2087
             </a>
           </div>
           <div class="flc_right_container flex">
             <ul class="flc_right_card">
               <li>
-                <a href="#"><i class="bx bx-chevron-right"></i>Home</a>
+                <a href="./"><i class="bx bx-chevron-right"></i>Home</a>
               </li>
               <li>
-                <a href="#"><i class="bx bx-chevron-right"></i>About Us</a>
+                <a href="./about-us.html"
+                  ><i class="bx bx-chevron-right"></i>About Us</a
+                >
               </li>
               <li>
-                <a href="#"><i class="bx bx-chevron-right"></i>Serives</a>
+                <a href="./services.html"
+                  ><i class="bx bx-chevron-right"></i>Serives</a
+                >
               </li>
               <li>
-                <a href="#"><i class="bx bx-chevron-right"></i>Contact Us</a>
+                <a href="./contact-us.html"
+                  ><i class="bx bx-chevron-right"></i>Contact Us</a
+                >
               </li>
             </ul>
             <ul class="flc_right_card">
               <li>
-                <a href="#"
+                <a href="./privacy-policy.html"
                   ><i class="bx bx-chevron-right"></i>Privacy Policy</a
                 >
               </li>
               <li>
-                <a href="#"
+                <a href="./terms-condition.html"
                   ><i class="bx bx-chevron-right"></i>Term & Conditions</a
                 >
               </li>
@@ -710,57 +716,10 @@
         </div>
       </div>
     </footer>
-    <!-- !LOCAL JS -->
-    <script src="./scripts/global.js"></script>
     <!-- !SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-      const wwoBtns = document.querySelectorAll(".wwo_nav_btn"),
-        wwoCards = document.querySelectorAll(".wwo_card");
-
-      const handlewwoBtnClick = (type) => {
-        wwoBtns.forEach((btn) =>
-          btn.getAttribute("data-wwo") === type
-            ? btn.classList.add("active")
-            : btn.classList.remove("active")
-        );
-        wwoCards.forEach((btn) =>
-          btn.getAttribute("data-wwo") === type
-            ? btn.classList.remove("hidden")
-            : btn.classList.add("hidden")
-        );
-      };
-
-      wwoBtns.forEach((btn) => {
-        btn.addEventListener("click", () =>
-          handlewwoBtnClick(btn.getAttribute("data-wwo"))
-        );
-      });
-
-      // !SWIPER JS
-      //   <!-- Initialize Swiper -->
-      var swiper = new Swiper(".mySwiper", {
-        effect: "none",
-        loop: true,
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 0,
-          modifier: 2,
-          slideShadows: true,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        autoplay: {
-          delay: 2000, // Delay between transitions in milliseconds
-          disableOnInteraction: false, // Keep autoplay running even after user interaction
-        },
-      });
-    </script>
+    <!-- !LOCAL JS -->
+    <script src="./scripts/global.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
